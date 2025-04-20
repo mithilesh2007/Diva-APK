@@ -543,3 +543,5 @@ public class DivaJni {
 - then in ghidra in functions i clicked on OnLoad because it loads the string here .
 
 ![image.png](attachment:3fc64eba-53be-4a75-ba86-b42bf84e03df:image.png)
+![image](https://github.com/user-attachments/assets/bbd43592-89b1-41e1-9065-f025660bceca)
+
