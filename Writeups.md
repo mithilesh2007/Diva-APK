@@ -545,3 +545,23 @@ public class DivaJni {
 ![image.png](attachment:3fc64eba-53be-4a75-ba86-b42bf84e03df:image.png)
 ![image](https://github.com/user-attachments/assets/bbd43592-89b1-41e1-9065-f025660bceca)
 
+## Input Validation Issues - Part-3
+
+```
+hint:
+Improper or no input validation issue arise when the input is not filterd or validated before using it. When developin components that take input from outside always validate it . This is a classic memmory corruption vulnerable. If you can get the code execution, I would love to here from you. I dont expect anyone to go that far through
+```
+
+- here we need to give a input do that we should be able to crash the app
+
+<aside>
+💡
+
+FUZZING
+
+**fuzzing** (or **fuzz testing**) is a technique used to discover bugs, crashes, and vulnerabilities in software by **feeding it lots of random, malformed, or unexpected inputs**.
+
+</aside>
+
+- If we enter random long numbers we should be able to crash the app because the app cannot handle long inputs (here the limit was 31 characters)
+
