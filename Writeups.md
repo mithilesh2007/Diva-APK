@@ -564,4 +564,25 @@ FUZZING
 </aside>
 
 - If we enter random long numbers we should be able to crash the app because the app cannot handle long inputs (here the limit was 31 characters)
+```
+public class InputValidation3Activity extends AppCompatActivity {
+    private DivaJni djni;
+
+    @Override // android.support.v7.app.AppCompatActivity, android.support.v4.app.FragmentActivity, android.support.v4.app.BaseFragmentActivityDonut, android.app.Activity
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_input_validation3);
+        this.djni = new DivaJni();
+    }
+
+    public void push(View view) {
+        EditText cTxt = (EditText) findViewById(R.id.ivi3CodeText);
+        if (this.djni.initiateLaunchSequence(cTxt.getText().toString()) != 0) {
+            Toast.makeText(this, "Launching in T - 10 ...", 0).show();
+        } else {
+            Toast.makeText(this, "Access denied!", 0).show();
+        }
+    }
+}
+```
 
